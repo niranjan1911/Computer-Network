@@ -1,0 +1,44 @@
+---------------match specific host------------
+
+Router>enable 
+Router#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#access-list 1 deny host 10.0.0.3
+Router(config)#access-list 1 permit any
+Router(config)#interface fastEthernet 0/1
+Router(config-if)#ip access-group 1 out
+Router(config-if)#
+
+--------------match the entire subnet-----------
+
+Router(config)#access-list 2 deny 10.0.0.0 0.255.255.255
+Router(config)#access-list 2 permit any
+Router(config)#interface fastethernet 0/1
+Router(config-if)#ip access-group 2 out
+Router(config-if)#
+
+---------------match an ip range----------------
+range 20.0.0.2 to 20.0.0.3
+
+Router(config)#access-list 3 deny 20.0.0.2 0.0.0.1
+Router(config)#access-list 3 permit any
+Router(config)#interface fa0/1
+Router(config-if)#ip access-group 3 out
+Router(config-if)#
+
+--------------match everyone and anyone----------
+
+Router(config)#access-list 4 permit 0.0.0.0 255.255.255.255
+Router(config)#access-list 5 deny 0.0.0.0 255.255.255.255
+Router(config)#access-list 4 permit 0.0.0.0 255.255.255.255
+Router(config)#ip access-group out
+                         ^
+% Invalid input detected at '^' marker.
+	
+Router(config)#interface fa0/1
+Router(config-if)#ip access-group 4 out
+Router(config-if)#ip access-group 5 out
+Router(config-if)#ip access-group 4 out
+Router(config-if)#
+
+

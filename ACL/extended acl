@@ -1,0 +1,46 @@
+-----------host to host--------------
+
+Router#enable
+Router#config
+Configuring from terminal, memory, or network [terminal]? terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#access-list 101 deny ip host 10.0.0.3 40.0.0.3 0.0.0.0
+Router(config)#access-list 101 permit ip any any
+Router(config)#interface fastEthernet 0/0
+Router(config-if)#ip access-group 101 in
+Router(config-if)#exit
+Router(config)#
+
+-----------host to network--------------
+
+Router#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface fastEthernet 0/0
+Router(config-if)#no shut
+Router(config-if)#exit
+Router(config)#access-list 102 deny ip host 10.0.0.3 40.0.0.0 0.255.255.255
+Router(config)#access-list 102 permit ip any any
+Router(config)#interface fastEthernet 0/0
+Router(config-if)#ip access-group 102 in
+Router(config-if)#exit
+Router(config)#
+
+---------network to network-------------
+
+Router(config)#access-list 103 deny ip 10.0.0.0 0.255.255.255 40.0.0.0 0.255.255.255
+Router(config)#access-list 103 permit ip any any
+Router(config)#interface fastethernet 0/0
+Router(config-if)#ip access-group 103 in
+Router(config-if)#exit
+Router(config)#interface fastethernet 0/0
+Router(config-if)#no ip access-group 103 in   //to undone the access control
+Router(config-if)#
+
+---------network to host---------------
+
+Router(config)#access-list 104 deny ip 10.0.0.0 0.255.255.255 40.0.0.3 0.0.0.0
+Router(config)#access-list 104 permit ip any any
+Router(config)#interface fastethernet 0/0
+Router(config-if)#ip access-group 104 in
+Router(config-if)#exit
+Router(config)#
