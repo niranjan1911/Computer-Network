@@ -1,0 +1,1052 @@
+nllab16@nllab-16:~$ help ping
+bash: help: no help topics match `ping'.  Try `help help' or `man -k ping' or `info ping'.
+nllab16@nllab-16:~$ ping
+Usage: ping [-aAbBdDfhLnOqrRUvV] [-c count] [-i interval] [-I interface]
+            [-m mark] [-M pmtudisc_option] [-l preload] [-p pattern] [-Q tos]
+            [-s packetsize] [-S sndbuf] [-t ttl] [-T timestamp_option]
+            [-w deadline] [-W timeout] [hop1 ...] destination
+nllab16@nllab-16:~$ ping -c
+ping: option requires an argument -- 'c'
+Usage: ping [-aAbBdDfhLnOqrRUvV] [-c count] [-i interval] [-I interface]
+            [-m mark] [-M pmtudisc_option] [-l preload] [-p pattern] [-Q tos]
+            [-s packetsize] [-S sndbuf] [-t ttl] [-T timestamp_option]
+            [-w deadline] [-W timeout] [hop1 ...] destination
+nllab16@nllab-16:~$ ifconfig
+enp2s0    Link encap:Ethernet  HWaddr f0:4d:a2:20:4d:80  
+          inet addr:10.10.11.176  Bcast:10.10.15.255  Mask:255.255.248.0
+          inet6 addr: fe80::b18c:683a:6488:9c0d/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:5744 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:120 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:910644 (910.6 KB)  TX bytes:15161 (15.1 KB)
+          Interrupt:16 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:2084 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2084 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1 
+          RX bytes:157784 (157.7 KB)  TX bytes:157784 (157.7 KB)
+
+nllab16@nllab-16:~$ ping localhost
+PING localhost (127.0.0.1) 56(84) bytes of data.
+64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.022 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.024 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=3 ttl=64 time=0.027 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=4 ttl=64 time=0.026 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=5 ttl=64 time=0.030 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=6 ttl=64 time=0.029 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=7 ttl=64 time=0.028 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=8 ttl=64 time=0.031 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=9 ttl=64 time=0.029 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=10 ttl=64 time=0.030 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=11 ttl=64 time=0.029 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=12 ttl=64 time=0.028 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=13 ttl=64 time=0.028 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=14 ttl=64 time=0.023 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=15 ttl=64 time=0.026 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=16 ttl=64 time=0.025 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=17 ttl=64 time=0.028 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=18 ttl=64 time=0.028 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=19 ttl=64 time=0.026 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=20 ttl=64 time=0.027 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=21 ttl=64 time=0.024 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=22 ttl=64 time=0.024 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=23 ttl=64 time=0.028 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=24 ttl=64 time=0.029 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=25 ttl=64 time=0.029 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=26 ttl=64 time=0.031 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=27 ttl=64 time=0.028 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=28 ttl=64 time=0.030 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=29 ttl=64 time=0.027 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=30 ttl=64 time=0.034 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=31 ttl=64 time=0.025 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=32 ttl=64 time=0.030 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=33 ttl=64 time=0.035 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=34 ttl=64 time=0.039 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=35 ttl=64 time=0.025 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=36 ttl=64 time=0.030 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=37 ttl=64 time=0.029 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=38 ttl=64 time=0.027 ms
+^C
+--- localhost ping statistics ---
+38 packets transmitted, 38 received, 0% packet loss, time 36999ms
+rtt min/avg/max/mdev = 0.022/0.028/0.039/0.004 ms
+nllab16@nllab-16:~$ ipconfig
+No command 'ipconfig' found, did you mean:
+ Command 'iwconfig' from package 'wireless-tools' (main)
+ Command 'ifconfig' from package 'net-tools' (main)
+ Command 'iconfig' from package 'ipmiutil' (universe)
+ipconfig: command not found
+nllab16@nllab-16:~$ ifconfig
+enp2s0    Link encap:Ethernet  HWaddr f0:4d:a2:20:4d:80  
+          inet addr:10.10.11.176  Bcast:10.10.15.255  Mask:255.255.248.0
+          inet6 addr: fe80::b18c:683a:6488:9c0d/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:12160 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:140 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:1548766 (1.5 MB)  TX bytes:17177 (17.1 KB)
+          Interrupt:16 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:2960 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2960 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1 
+          RX bytes:223368 (223.3 KB)  TX bytes:223368 (223.3 KB)
+
+nllab16@nllab-16:~$ ping 10.10.13.47
+PING 10.10.13.47 (10.10.13.47) 56(84) bytes of data.
+64 bytes from 10.10.13.47: icmp_seq=1 ttl=64 time=0.206 ms
+64 bytes from 10.10.13.47: icmp_seq=2 ttl=64 time=0.202 ms
+64 bytes from 10.10.13.47: icmp_seq=3 ttl=64 time=0.209 ms
+64 bytes from 10.10.13.47: icmp_seq=4 ttl=64 time=0.202 ms
+64 bytes from 10.10.13.47: icmp_seq=5 ttl=64 time=0.200 ms
+64 bytes from 10.10.13.47: icmp_seq=6 ttl=64 time=0.197 ms
+64 bytes from 10.10.13.47: icmp_seq=7 ttl=64 time=0.207 ms
+64 bytes from 10.10.13.47: icmp_seq=8 ttl=64 time=0.208 ms
+64 bytes from 10.10.13.47: icmp_seq=9 ttl=64 time=0.200 ms
+64 bytes from 10.10.13.47: icmp_seq=10 ttl=64 time=0.227 ms
+64 bytes from 10.10.13.47: icmp_seq=11 ttl=64 time=0.228 ms
+64 bytes from 10.10.13.47: icmp_seq=12 ttl=64 time=0.229 ms
+^C
+--- 10.10.13.47 ping statistics ---
+12 packets transmitted, 12 received, 0% packet loss, time 10994ms
+rtt min/avg/max/mdev = 0.197/0.209/0.229/0.019 ms
+nllab16@nllab-16:~$ tracert
+No command 'tracert' found, did you mean:
+ Command 'tracert6' from package 'ndisc6' (universe)
+ Command 'tracer' from package 'pvm-dev' (universe)
+tracert: command not found
+nllab16@nllab-16:~$ tracert www.google.com
+No command 'tracert' found, did you mean:
+ Command 'tracert6' from package 'ndisc6' (universe)
+ Command 'tracer' from package 'pvm-dev' (universe)
+tracert: command not found
+nllab16@nllab-16:~$ tracert google.com
+No command 'tracert' found, did you mean:
+ Command 'tracer' from package 'pvm-dev' (universe)
+ Command 'tracert6' from package 'ndisc6' (universe)
+tracert: command not found
+nllab16@nllab-16:~$ tracert help
+No command 'tracert' found, did you mean:
+ Command 'tracert6' from package 'ndisc6' (universe)
+ Command 'tracer' from package 'pvm-dev' (universe)
+tracert: command not found
+nllab16@nllab-16:~$ traceroute help
+traceroute: unknown host
+nllab16@nllab-16:~$ traceroute www.google.com
+traceroute: unknown host
+nllab16@nllab-16:~$ tracepath www.google.com
+gethostbyname2: Host name lookup failure
+nllab16@nllab-16:~$ traceroute google.com
+traceroute: unknown host
+nllab16@nllab-16:~$ traceroute google.com
+traceroute to google.com (216.58.199.174), 64 hops max
+  1   10.10.10.1  0.264ms  0.272ms  0.296ms 
+  2   *  *  * 
+  3   220.224.149.38  2.482ms  2.169ms  2.114ms 
+  4   115.255.28.81  2.117ms  95.627ms  200.701ms 
+  5   115.255.252.57  563.818ms  211.411ms  20.145ms 
+  6   72.14.218.146  28.002ms  29.849ms  19.642ms 
+  7   108.170.248.161  10.428ms  6.804ms  5.479ms 
+  8   209.85.242.125  5.896ms  4.438ms  4.807ms 
+  9   216.58.199.174  4.640ms  4.410ms  4.671ms 
+nllab16@nllab-16:~$ traceroute pict.edu
+traceroute to pict.edu (104.28.14.146), 64 hops max
+  1   10.10.10.1  0.234ms  0.222ms  0.293ms 
+  2   *  *  * 
+  3   220.224.149.42  2.354ms  1.984ms  2.259ms 
+  4   115.255.28.81  2.084ms  1.993ms  2.068ms 
+  5   115.255.252.173  3.865ms  5.857ms  3.935ms 
+  6   62.216.147.77  7.290ms  4.075ms  6.198ms 
+  7   62.216.128.249  52.273ms  52.329ms  52.487ms 
+  8   85.95.26.57  52.811ms  56.152ms  77.302ms 
+  9   27.111.228.132  95.921ms  65.834ms  52.407ms 
+ 10   104.28.14.146  51.024ms  50.941ms  51.106ms 
+nllab16@nllab-16:~$ nslookup
+> ^Cnllab16@nllab-16:~$ nslookup google.com
+Server:		127.0.1.1
+Address:	127.0.1.1#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 172.217.167.174
+
+nllab16@nllab-16:~$ nslookup pict.edu
+Server:		127.0.1.1
+Address:	127.0.1.1#53
+
+Non-authoritative answer:
+Name:	pict.edu
+Address: 104.28.15.146
+Name:	pict.edu
+Address: 104.28.14.146
+
+nllab16@nllab-16:~$ ping pict.edu
+PING pict.edu (104.28.14.146) 56(84) bytes of data.
+64 bytes from 104.28.14.146: icmp_seq=1 ttl=57 time=51.3 ms
+64 bytes from 104.28.14.146: icmp_seq=2 ttl=57 time=51.4 ms
+64 bytes from 104.28.14.146: icmp_seq=3 ttl=57 time=51.2 ms
+64 bytes from 104.28.14.146: icmp_seq=4 ttl=57 time=51.1 ms
+64 bytes from 104.28.14.146: icmp_seq=5 ttl=57 time=51.3 ms
+64 bytes from 104.28.14.146: icmp_seq=6 ttl=57 time=51.3 ms
+^C
+--- pict.edu ping statistics ---
+7 packets transmitted, 7 received, 0% packet loss, time 6007ms
+rtt min/avg/max/mdev = 51.181/51.296/51.411/0.258 ms
+nllab16@nllab-16:~$ whois
+Usage: whois [OPTION]... OBJECT...
+
+-h HOST, --host HOST   connect to server HOST
+-p PORT, --port PORT   connect to PORT
+-H                     hide legal disclaimers
+      --verbose        explain what is being done
+      --help           display this help and exit
+      --version        output version information and exit
+
+These flags are supported by whois.ripe.net and some RIPE-like servers:
+-l                     find the one level less specific match
+-L                     find all levels less specific matches
+-m                     find all one level more specific matches
+-M                     find all levels of more specific matches
+-c                     find the smallest match containing a mnt-irt attribute
+-x                     exact match
+-b                     return brief IP address ranges with abuse contact
+-B                     turn off object filtering (show email addresses)
+-G                     turn off grouping of associated objects
+-d                     return DNS reverse delegation objects too
+-i ATTR[,ATTR]...      do an inverse look-up for specified ATTRibutes
+-T TYPE[,TYPE]...      only look for objects of TYPE
+-K                     only primary keys are returned
+-r                     turn off recursive look-ups for contact information
+-R                     force to show local copy of the domain object even
+                       if it contains referral
+-a                     also search all the mirrored databases
+-s SOURCE[,SOURCE]...  search the database mirrored from SOURCE
+-g SOURCE:FIRST-LAST   find updates from SOURCE from serial FIRST to LAST
+-t TYPE                request template for object of TYPE
+-v TYPE                request verbose template for object of TYPE
+-q [version|sources|types]  query specified server info
+nllab16@nllab-16:~$ whois -h
+whois: option requires an argument -- 'h'
+Usage: whois [OPTION]... OBJECT...
+
+-h HOST, --host HOST   connect to server HOST
+-p PORT, --port PORT   connect to PORT
+-H                     hide legal disclaimers
+      --verbose        explain what is being done
+      --help           display this help and exit
+      --version        output version information and exit
+
+These flags are supported by whois.ripe.net and some RIPE-like servers:
+-l                     find the one level less specific match
+-L                     find all levels less specific matches
+-m                     find all one level more specific matches
+-M                     find all levels of more specific matches
+-c                     find the smallest match containing a mnt-irt attribute
+-x                     exact match
+-b                     return brief IP address ranges with abuse contact
+-B                     turn off object filtering (show email addresses)
+-G                     turn off grouping of associated objects
+-d                     return DNS reverse delegation objects too
+-i ATTR[,ATTR]...      do an inverse look-up for specified ATTRibutes
+-T TYPE[,TYPE]...      only look for objects of TYPE
+-K                     only primary keys are returned
+-r                     turn off recursive look-ups for contact information
+-R                     force to show local copy of the domain object even
+                       if it contains referral
+-a                     also search all the mirrored databases
+-s SOURCE[,SOURCE]...  search the database mirrored from SOURCE
+-g SOURCE:FIRST-LAST   find updates from SOURCE from serial FIRST to LAST
+-t TYPE                request template for object of TYPE
+-v TYPE                request verbose template for object of TYPE
+-q [version|sources|types]  query specified server info
+nllab16@nllab-16:~$ hostname
+nllab-16
+nllab16@nllab-16:~$ arp
+Address                  HWtype  HWaddress           Flags Mask            Iface
+10.10.13.115             ether   f4:8e:38:87:40:da   C                     enp2s0
+10.10.10.1               ether   00:90:27:ff:ce:a7   C                     enp2s0
+10.10.13.133             ether   f0:4d:a2:fd:b2:d1   C                     enp2s0
+nllab16@nllab-16:~$ ifconfig
+enp2s0    Link encap:Ethernet  HWaddr f0:4d:a2:20:4d:80  
+          inet addr:10.10.11.176  Bcast:10.10.15.255  Mask:255.255.248.0
+          inet6 addr: fe80::e91b:d7c9:427e:45c5/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:191563 errors:0 dropped:3 overruns:0 frame:0
+          TX packets:50499 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:77073009 (77.0 MB)  TX bytes:5303188 (5.3 MB)
+          Interrupt:16 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:9107 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:9107 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1 
+          RX bytes:868648 (868.6 KB)  TX bytes:868648 (868.6 KB)
+
+nllab16@nllab-16:~$ arp
+Address                  HWtype  HWaddress           Flags Mask            Iface
+10.10.13.115             ether   f4:8e:38:87:40:da   C                     enp2s0
+10.10.10.1               ether   00:90:27:ff:ce:a7   C                     enp2s0
+10.10.13.133             ether   f0:4d:a2:fd:b2:d1   C                     enp2s0
+10.10.14.120             ether   f0:4d:a2:20:16:7d   C                     enp2s0
+nllab16@nllab-16:~$ arp 10.10.13.47
+Address                  HWtype  HWaddress           Flags Mask            Iface
+10.10.13.47              ether   b8:ac:6f:4c:b1:3c   C                     enp2s0
+nllab16@nllab-16:~$ whois GOOGLE.COM
+   Domain Name: GOOGLE.COM
+   Registry Domain ID: 2138514_DOMAIN_COM-VRSN
+   Registrar WHOIS Server: whois.markmonitor.com
+   Registrar URL: http://www.markmonitor.com
+   Updated Date: 2019-09-09T15:39:04Z
+   Creation Date: 1997-09-15T04:00:00Z
+   Registry Expiry Date: 2028-09-14T04:00:00Z
+   Registrar: MarkMonitor Inc.
+   Registrar IANA ID: 292
+   Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+   Registrar Abuse Contact Phone: +1.2083895740
+   Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+   Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+   Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+   Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+   Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+   Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
+   Name Server: NS1.GOOGLE.COM
+   Name Server: NS2.GOOGLE.COM
+   Name Server: NS3.GOOGLE.COM
+   Name Server: NS4.GOOGLE.COM
+   DNSSEC: unsigned
+   URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of whois database: 2019-12-19T03:26:51Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+NOTICE: The expiration date displayed in this record is the date the
+registrar's sponsorship of the domain name registration in the registry is
+currently set to expire. This date does not necessarily reflect the expiration
+date of the domain name registrant's agreement with the sponsoring
+registrar.  Users may consult the sponsoring registrar's Whois database to
+view the registrar's reported date of expiration for this registration.
+
+TERMS OF USE: You are not authorized to access or query our Whois
+database through the use of electronic processes that are high-volume and
+automated except as reasonably necessary to register domain names or
+modify existing registrations; the Data in VeriSign Global Registry
+Services' ("VeriSign") Whois database is provided by VeriSign for
+information purposes only, and to assist persons in obtaining information
+about or related to a domain name registration record. VeriSign does not
+guarantee its accuracy. By submitting a Whois query, you agree to abide
+by the following terms of use: You agree that you may use this Data only
+for lawful purposes and that under no circumstances will you use this Data
+to: (1) allow, enable, or otherwise support the transmission of mass
+unsolicited, commercial advertising or solicitations via e-mail, telephone,
+or facsimile; or (2) enable high volume, automated, electronic processes
+that apply to VeriSign (or its computer systems). The compilation,
+repackaging, dissemination or other use of this Data is expressly
+prohibited without the prior written consent of VeriSign. You agree not to
+use electronic processes that are automated and high-volume to access or
+query the Whois database except as reasonably necessary to register
+domain names or modify existing registrations. VeriSign reserves the right
+to restrict your access to the Whois database in its sole discretion to ensure
+operational stability.  VeriSign may restrict or terminate your access to the
+Whois database for failure to abide by these terms of use. VeriSign
+reserves the right to modify these terms at any time.
+
+The Registry database contains ONLY .COM, .NET, .EDU domains and
+Registrars.
+nllab16@nllab-16:~$ whois google.com
+   Domain Name: GOOGLE.COM
+   Registry Domain ID: 2138514_DOMAIN_COM-VRSN
+   Registrar WHOIS Server: whois.markmonitor.com
+   Registrar URL: http://www.markmonitor.com
+   Updated Date: 2019-09-09T15:39:04Z
+   Creation Date: 1997-09-15T04:00:00Z
+   Registry Expiry Date: 2028-09-14T04:00:00Z
+   Registrar: MarkMonitor Inc.
+   Registrar IANA ID: 292
+   Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+   Registrar Abuse Contact Phone: +1.2083895740
+   Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+   Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+   Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+   Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+   Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+   Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
+   Name Server: NS1.GOOGLE.COM
+   Name Server: NS2.GOOGLE.COM
+   Name Server: NS3.GOOGLE.COM
+   Name Server: NS4.GOOGLE.COM
+   DNSSEC: unsigned
+   URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of whois database: 2019-12-19T03:27:26Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+NOTICE: The expiration date displayed in this record is the date the
+registrar's sponsorship of the domain name registration in the registry is
+currently set to expire. This date does not necessarily reflect the expiration
+date of the domain name registrant's agreement with the sponsoring
+registrar.  Users may consult the sponsoring registrar's Whois database to
+view the registrar's reported date of expiration for this registration.
+
+TERMS OF USE: You are not authorized to access or query our Whois
+database through the use of electronic processes that are high-volume and
+automated except as reasonably necessary to register domain names or
+modify existing registrations; the Data in VeriSign Global Registry
+Services' ("VeriSign") Whois database is provided by VeriSign for
+information purposes only, and to assist persons in obtaining information
+about or related to a domain name registration record. VeriSign does not
+guarantee its accuracy. By submitting a Whois query, you agree to abide
+by the following terms of use: You agree that you may use this Data only
+for lawful purposes and that under no circumstances will you use this Data
+to: (1) allow, enable, or otherwise support the transmission of mass
+unsolicited, commercial advertising or solicitations via e-mail, telephone,
+or facsimile; or (2) enable high volume, automated, electronic processes
+that apply to VeriSign (or its computer systems). The compilation,
+repackaging, dissemination or other use of this Data is expressly
+prohibited without the prior written consent of VeriSign. You agree not to
+use electronic processes that are automated and high-volume to access or
+query the Whois database except as reasonably necessary to register
+domain names or modify existing registrations. VeriSign reserves the right
+to restrict your access to the Whois database in its sole discretion to ensure
+operational stability.  VeriSign may restrict or terminate your access to the
+Whois database for failure to abide by these terms of use. VeriSign
+reserves the right to modify these terms at any time.
+
+The Registry database contains ONLY .COM, .NET, .EDU domains and
+Registrars.
+nllab16@nllab-16:~$ finger
+Login     Name       Tty      Idle  Login Time   Office     Office Phone
+nllab16   NLLAB16    tty7     1:00  Dec 19 08:00 (:0)
+nllab16@nllab-16:~$ netstat
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 10.10.11.176:45834      ec2-3-220-216-41.:https ESTABLISHED
+tcp        0      0 10.10.11.176:53480      bom05s15-in-f2.1e:https ESTABLISHED
+tcp        0      0 10.10.11.176:33450      172.217.212.94:https    ESTABLISHED
+Active UNIX domain sockets (w/o servers)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ]         DGRAM                    20863    /run/user/1000/systemd/notify
+unix  2      [ ]         DGRAM                    10162    /run/systemd/cgroups-agent
+unix  17     [ ]         DGRAM                    10167    /run/systemd/journal/dev-log
+unix  2      [ ]         DGRAM                    10173    /run/systemd/journal/syslog
+unix  7      [ ]         DGRAM                    10176    /run/systemd/journal/socket
+unix  3      [ ]         DGRAM                    10161    /run/systemd/notify
+unix  3      [ ]         STREAM     CONNECTED     18932    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22759    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     20977    
+unix  3      [ ]         STREAM     CONNECTED     21734    
+unix  3      [ ]         STREAM     CONNECTED     21293    
+unix  3      [ ]         STREAM     CONNECTED     23750    
+unix  3      [ ]         STREAM     CONNECTED     23275    
+unix  3      [ ]         STREAM     CONNECTED     17283    
+unix  3      [ ]         STREAM     CONNECTED     42217    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     27614    @/dbus-vfs-daemon/socket-JKz8uK4I
+unix  3      [ ]         STREAM     CONNECTED     24561    
+unix  3      [ ]         STREAM     CONNECTED     22159    
+unix  2      [ ]         STREAM     CONNECTED     18053    
+unix  3      [ ]         STREAM     CONNECTED     45825    
+unix  3      [ ]         STREAM     CONNECTED     25229    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     28022    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    14779    
+unix  3      [ ]         DGRAM                    10661    
+unix  3      [ ]         STREAM     CONNECTED     24278    
+unix  3      [ ]         STREAM     CONNECTED     22794    
+unix  3      [ ]         STREAM     CONNECTED     21821    
+unix  2      [ ]         DGRAM                    19346    
+unix  3      [ ]         STREAM     CONNECTED     23724    
+unix  3      [ ]         STREAM     CONNECTED     22209    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     21775    
+unix  3      [ ]         STREAM     CONNECTED     23060    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22241    
+unix  3      [ ]         STREAM     CONNECTED     20996    
+unix  3      [ ]         STREAM     CONNECTED     17299    
+unix  3      [ ]         SEQPACKET  CONNECTED     32651    
+unix  3      [ ]         STREAM     CONNECTED     21694    
+unix  3      [ ]         STREAM     CONNECTED     21670    
+unix  3      [ ]         STREAM     CONNECTED     21176    @/tmp/dbus-9kL6MDb1
+unix  3      [ ]         STREAM     CONNECTED     21610    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     16136    
+unix  3      [ ]         STREAM     CONNECTED     15932    
+unix  3      [ ]         STREAM     CONNECTED     23367    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22517    
+unix  3      [ ]         STREAM     CONNECTED     22290    
+unix  3      [ ]         STREAM     CONNECTED     21752    
+unix  3      [ ]         STREAM     CONNECTED     22222    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22016    
+unix  3      [ ]         STREAM     CONNECTED     20752    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22774    
+unix  3      [ ]         STREAM     CONNECTED     22707    
+unix  3      [ ]         STREAM     CONNECTED     45862    @nllab16-com.canonical.Unity.Scope.files.T32825718904152
+unix  3      [ ]         STREAM     CONNECTED     46242    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     28024    
+unix  3      [ ]         STREAM     CONNECTED     24273    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21706    @/tmp/dbus-077VlGZZBx
+unix  3      [ ]         STREAM     CONNECTED     21072    
+unix  3      [ ]         STREAM     CONNECTED     24285    
+unix  3      [ ]         STREAM     CONNECTED     23967    
+unix  3      [ ]         STREAM     CONNECTED     21863    
+unix  3      [ ]         STREAM     CONNECTED     21804    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     23366    
+unix  3      [ ]         DGRAM                    19856    
+unix  3      [ ]         STREAM     CONNECTED     21369    
+unix  3      [ ]         STREAM     CONNECTED     21773    
+unix  3      [ ]         STREAM     CONNECTED     21295    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     16948    
+unix  3      [ ]         STREAM     CONNECTED     21700    
+unix  3      [ ]         STREAM     CONNECTED     21018    
+unix  3      [ ]         STREAM     CONNECTED     32113    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     16524    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22303    
+unix  3      [ ]         STREAM     CONNECTED     22530    
+unix  3      [ ]         STREAM     CONNECTED     45868    @nllab16-com.canonical.Unity.Scope.applications.T32829131051758
+unix  3      [ ]         STREAM     CONNECTED     28312    @/tmp/dbus-077VlGZZBx
+unix  3      [ ]         STREAM     CONNECTED     21228    
+unix  3      [ ]         STREAM     CONNECTED     21108    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     21044    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     31754    
+unix  3      [ ]         STREAM     CONNECTED     22770    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22214    
+unix  3      [ ]         STREAM     CONNECTED     21407    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     17868    
+unix  3      [ ]         STREAM     CONNECTED     21755    
+unix  3      [ ]         STREAM     CONNECTED     21002    @/com/ubuntu/upstart-session/1000/2485
+unix  3      [ ]         STREAM     CONNECTED     23346    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     22324    
+unix  3      [ ]         STREAM     CONNECTED     17956    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     17738    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     23415    @/dbus-vfs-daemon/socket-5BzFgN0o
+unix  3      [ ]         STREAM     CONNECTED     23913    @/tmp/dbus-077VlGZZBx
+unix  3      [ ]         STREAM     CONNECTED     21868    
+unix  3      [ ]         STREAM     CONNECTED     21816    
+unix  3      [ ]         STREAM     CONNECTED     20024    
+unix  3      [ ]         STREAM     CONNECTED     45835    
+unix  3      [ ]         STREAM     CONNECTED     39625    
+unix  3      [ ]         STREAM     CONNECTED     28037    
+unix  3      [ ]         STREAM     CONNECTED     28007    
+unix  3      [ ]         STREAM     CONNECTED     23430    
+unix  3      [ ]         STREAM     CONNECTED     21183    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     22748    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     32517    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     28311    
+unix  3      [ ]         STREAM     CONNECTED     21209    @/tmp/dbus-077VlGZZBx
+unix  3      [ ]         STREAM     CONNECTED     21614    
+unix  3      [ ]         STREAM     CONNECTED     24325    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     23725    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     22098    @/tmp/.ICE-unix/2695
+unix  3      [ ]         STREAM     CONNECTED     21349    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21693    
+unix  3      [ ]         STREAM     CONNECTED     23984    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22275    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     21019    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17157    
+unix  3      [ ]         STREAM     CONNECTED     20395    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22798    
+unix  3      [ ]         STREAM     CONNECTED     45866    @nllab16-com.canonical.Unity.Scope.scopes.T32829117788234
+unix  3      [ ]         STREAM     CONNECTED     28313    
+unix  3      [ ]         STREAM     CONNECTED     21141    
+unix  3      [ ]         STREAM     CONNECTED     18409    
+unix  2      [ ]         DGRAM                    14772    
+unix  3      [ ]         STREAM     CONNECTED     24558    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     22212    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     16525    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     23749    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     20985    
+unix  3      [ ]         STREAM     CONNECTED     22611    
+unix  3      [ ]         STREAM     CONNECTED     21516    @/com/ubuntu/upstart-session/1000/2485
+unix  3      [ ]         STREAM     CONNECTED     45850    
+unix  3      [ ]         STREAM     CONNECTED     10652    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     23887    
+unix  3      [ ]         STREAM     CONNECTED     22584    
+unix  3      [ ]         STREAM     CONNECTED     21799    
+unix  3      [ ]         STREAM     CONNECTED     22278    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     46254    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     45842    
+unix  3      [ ]         STREAM     CONNECTED     40374    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     28013    
+unix  3      [ ]         STREAM     CONNECTED     21217    
+unix  3      [ ]         STREAM     CONNECTED     29650    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21102    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     31751    
+unix  3      [ ]         STREAM     CONNECTED     23281    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     23369    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     22311    @/tmp/dbus-077VlGZZBx
+unix  3      [ ]         STREAM     CONNECTED     24324    
+unix  3      [ ]         STREAM     CONNECTED     22574    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     21552    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     17580    
+unix  3      [ ]         STREAM     CONNECTED     23617    
+unix  3      [ ]         STREAM     CONNECTED     22329    @/tmp/dbus-077VlGZZBx
+unix  3      [ ]         STREAM     CONNECTED     45841    
+unix  3      [ ]         STREAM     CONNECTED     22614    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     21824    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     21208    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     16530    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     28019    
+unix  3      [ ]         STREAM     CONNECTED     19466    
+unix  3      [ ]         STREAM     CONNECTED     24279    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     22578    
+unix  3      [ ]         STREAM     CONNECTED     33058    
+unix  3      [ ]         STREAM     CONNECTED     23429    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    22597    
+unix  3      [ ]         STREAM     CONNECTED     21777    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     16765    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     23313    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     23665    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22310    
+unix  3      [ ]         STREAM     CONNECTED     22762    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    17291    
+unix  3      [ ]         STREAM     CONNECTED     31789    @/tmp/dbus-9kL6MDb1
+unix  3      [ ]         STREAM     CONNECTED     46275    
+unix  3      [ ]         STREAM     CONNECTED     45836    @nllab16-com.canonical.Unity.Master.Scope.applications.T32824818226549
+unix  3      [ ]         STREAM     CONNECTED     27611    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22610    
+unix  3      [ ]         STREAM     CONNECTED     21128    
+unix  3      [ ]         STREAM     CONNECTED     22760    
+unix  3      [ ]         STREAM     CONNECTED     22233    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     23973    
+unix  3      [ ]         STREAM     CONNECTED     21069    
+unix  3      [ ]         STREAM     CONNECTED     21534    
+unix  2      [ ]         DGRAM                    11521    
+unix  3      [ ]         STREAM     CONNECTED     23751    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     23736    
+unix  3      [ ]         STREAM     CONNECTED     21372    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21532    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     21001    
+unix  2      [ ]         DGRAM                    32034    
+unix  3      [ ]         STREAM     CONNECTED     21422    @/tmp/dbus-9kL6MDb1
+unix  3      [ ]         STREAM     CONNECTED     21703    
+unix  3      [ ]         STREAM     CONNECTED     17316    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    16267    
+unix  3      [ ]         STREAM     CONNECTED     28031    
+unix  3      [ ]         STREAM     CONNECTED     20172    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21394    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     23983    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22307    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22234    
+unix  3      [ ]         DGRAM                    19855    
+unix  3      [ ]         STREAM     CONNECTED     22593    
+unix  3      [ ]         STREAM     CONNECTED     21774    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21301    
+unix  3      [ ]         STREAM     CONNECTED     21273    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     17329    
+unix  3      [ ]         STREAM     CONNECTED     28327    
+unix  3      [ ]         STREAM     CONNECTED     22221    
+unix  3      [ ]         STREAM     CONNECTED     31786    
+unix  3      [ ]         STREAM     CONNECTED     22752    
+unix  3      [ ]         STREAM     CONNECTED     46256    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     27853    
+unix  3      [ ]         STREAM     CONNECTED     23427    
+unix  3      [ ]         STREAM     CONNECTED     21172    
+unix  3      [ ]         STREAM     CONNECTED     21605    
+unix  3      [ ]         STREAM     CONNECTED     20690    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17292    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     29676    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     17720    
+unix  3      [ ]         STREAM     CONNECTED     22795    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     21807    
+unix  2      [ ]         STREAM     CONNECTED     21878    
+unix  3      [ ]         STREAM     CONNECTED     21636    
+unix  3      [ ]         STREAM     CONNECTED     16280    
+unix  2      [ ]         DGRAM                    10658    
+unix  3      [ ]         STREAM     CONNECTED     21511    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     23567    
+unix  3      [ ]         STREAM     CONNECTED     22776    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21782    @/tmp/dbus-077VlGZZBx
+unix  3      [ ]         STREAM     CONNECTED     28069    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     24272    
+unix  3      [ ]         STREAM     CONNECTED     21345    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     39624    
+unix  3      [ ]         STREAM     CONNECTED     21493    
+unix  3      [ ]         STREAM     CONNECTED     21604    @/tmp/dbus-9kL6MDb1
+unix  3      [ ]         STREAM     CONNECTED     25234    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     16045    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     31755    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     22595    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    18526    
+unix  3      [ ]         STREAM     CONNECTED     21362    
+unix  3      [ ]         STREAM     CONNECTED     21287    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     21259    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     20945    
+unix  3      [ ]         STREAM     CONNECTED     23368    
+unix  3      [ ]         STREAM     CONNECTED     23319    
+unix  3      [ ]         STREAM     CONNECTED     22298    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     22270    
+unix  3      [ ]         STREAM     CONNECTED     21759    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     23294    @/dbus-vfs-daemon/socket-4ZmuFjPW
+unix  3      [ ]         STREAM     CONNECTED     22589    
+unix  3      [ ]         STREAM     CONNECTED     20717    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     46253    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     40373    
+unix  3      [ ]         STREAM     CONNECTED     28008    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     27594    
+unix  3      [ ]         STREAM     CONNECTED     21872    
+unix  3      [ ]         STREAM     CONNECTED     21654    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    16466    
+unix  3      [ ]         DGRAM                    14776    
+unix  3      [ ]         STREAM     CONNECTED     22771    
+unix  3      [ ]         STREAM     CONNECTED     22745    
+unix  3      [ ]         STREAM     CONNECTED     32112    
+unix  3      [ ]         STREAM     CONNECTED     21971    
+unix  3      [ ]         STREAM     CONNECTED     21206    @/tmp/dbus-077VlGZZBx
+unix  3      [ ]         STREAM     CONNECTED     21202    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     21637    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     23885    
+unix  3      [ ]         STREAM     CONNECTED     23572    
+unix  3      [ ]         STREAM     CONNECTED     22331    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     21006    
+unix  3      [ ]         STREAM     CONNECTED     21073    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     23340    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22585    @/tmp/dbus-077VlGZZBx
+unix  3      [ ]         STREAM     CONNECTED     39626    @/tmp/dbus-077VlGZZBx
+unix  3      [ ]         STREAM     CONNECTED     28041    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22203    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     28328    @/tmp/dbus-9kL6MDb1
+unix  2      [ ]         DGRAM                    22026    
+unix  3      [ ]         STREAM     CONNECTED     31787    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     24292    
+unix  3      [ ]         STREAM     CONNECTED     23337    
+unix  3      [ ]         STREAM     CONNECTED     22292    
+unix  3      [ ]         STREAM     CONNECTED     22728    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     20984    
+unix  3      [ ]         STREAM     CONNECTED     17278    
+unix  3      [ ]         STREAM     CONNECTED     16959    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     16522    
+unix  3      [ ]         STREAM     CONNECTED     25243    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21020    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    17718    
+unix  3      [ ]         STREAM     CONNECTED     23888    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     21339    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22301    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22741    
+unix  3      [ ]         STREAM     CONNECTED     16884    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     28014    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     22613    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21781    
+unix  3      [ ]         STREAM     CONNECTED     21686    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     21557    
+unix  3      [ ]         STREAM     CONNECTED     28646    
+unix  3      [ ]         STREAM     CONNECTED     28032    @/tmp/dbus-9kL6MDb1
+unix  3      [ ]         STREAM     CONNECTED     21173    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     22718    
+unix  3      [ ]         STREAM     CONNECTED     23310    @/tmp/dbus-9kL6MDb1
+unix  3      [ ]         STREAM     CONNECTED     22161    @/tmp/dbus-077VlGZZBx
+unix  3      [ ]         STREAM     CONNECTED     21800    
+unix  3      [ ]         STREAM     CONNECTED     20191    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     11663    
+unix  3      [ ]         STREAM     CONNECTED     32895    
+unix  3      [ ]         STREAM     CONNECTED     21763    
+unix  3      [ ]         STREAM     CONNECTED     23059    
+unix  3      [ ]         STREAM     CONNECTED     22866    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22242    
+unix  3      [ ]         STREAM     CONNECTED     22319    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21177    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     17460    
+unix  3      [ ]         STREAM     CONNECTED     22761    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17958    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     17724    
+unix  3      [ ]         STREAM     CONNECTED     16643    
+unix  3      [ ]         STREAM     CONNECTED     23974    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     23737    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     22291    
+unix  3      [ ]         STREAM     CONNECTED     21412    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     21701    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22797    
+unix  3      [ ]         STREAM     CONNECTED     45847    
+unix  3      [ ]         STREAM     CONNECTED     46243    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25242    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     28023    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     27595    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     22220    
+unix  3      [ ]         STREAM     CONNECTED     21175    
+unix  3      [ ]         STREAM     CONNECTED     20171    
+unix  2      [ ]         DGRAM                    11513    
+unix  3      [ ]         STREAM     CONNECTED     23422    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     23960    
+unix  3      [ ]         STREAM     CONNECTED     22581    
+unix  3      [ ]         STREAM     CONNECTED     24923    
+unix  3      [ ]         STREAM     CONNECTED     23320    
+unix  3      [ ]         STREAM     CONNECTED     17852    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21371    
+unix  3      [ ]         STREAM     CONNECTED     21768    
+unix  3      [ ]         STREAM     CONNECTED     21011    
+unix  3      [ ]         STREAM     CONNECTED     21003    @/com/ubuntu/upstart-session/1000/2485
+unix  3      [ ]         STREAM     CONNECTED     28314    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     21624    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     17345    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     31772    
+unix  3      [ ]         STREAM     CONNECTED     21305    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     28306    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     18345    
+unix  3      [ ]         STREAM     CONNECTED     27450    
+unix  3      [ ]         STREAM     CONNECTED     14205    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    22232    
+unix  3      [ ]         STREAM     CONNECTED     22527    
+unix  3      [ ]         STREAM     CONNECTED     21342    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     23338    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     16977    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22201    
+unix  3      [ ]         STREAM     CONNECTED     21754    
+unix  3      [ ]         STREAM     CONNECTED     21685    
+unix  3      [ ]         STREAM     CONNECTED     23934    
+unix  3      [ ]         STREAM     CONNECTED     22323    
+unix  3      [ ]         STREAM     CONNECTED     21808    
+unix  3      [ ]         STREAM     CONNECTED     21783    
+unix  3      [ ]         STREAM     CONNECTED     17719    
+unix  3      [ ]         STREAM     CONNECTED     40379    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     28025    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     27854    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     24274    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21075    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     25244    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    32120    
+unix  3      [ ]         STREAM     CONNECTED     31782    
+unix  3      [ ]         STREAM     CONNECTED     28668    
+unix  3      [ ]         STREAM     CONNECTED     21114    @/tmp/dbus-9kL6MDb1
+unix  3      [ ]         STREAM     CONNECTED     21510    
+unix  3      [ ]         STREAM     CONNECTED     21424    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     21815    @/tmp/dbus-077VlGZZBx
+unix  3      [ ]         STREAM     CONNECTED     21735    
+unix  3      [ ]         STREAM     CONNECTED     17202    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     16756    
+unix  3      [ ]         STREAM     CONNECTED     24927    
+unix  3      [ ]         STREAM     CONNECTED     23721    
+unix  3      [ ]         STREAM     CONNECTED     23575    @/dbus-vfs-daemon/socket-saXVCxwL
+unix  3      [ ]         STREAM     CONNECTED     20433    @/com/ubuntu/upstart-session/1000/2485
+unix  3      [ ]         STREAM     CONNECTED     16386    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     28305    
+unix  3      [ ]         STREAM     CONNECTED     23345    
+unix  3      [ ]         STREAM     CONNECTED     22772    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    22217    
+unix  3      [ ]         STREAM     CONNECTED     21873    /run/user/1000/pulse/native
+unix  3      [ ]         DGRAM                    10660    
+unix  3      [ ]         STREAM     CONNECTED     20855    
+unix  3      [ ]         STREAM     CONNECTED     16523    
+unix  3      [ ]         STREAM     CONNECTED     24594    
+unix  3      [ ]         STREAM     CONNECTED     22306    
+unix  3      [ ]         STREAM     CONNECTED     45851    @/tmp/dbus-Li7mCKWUaP
+unix  2      [ ]         DGRAM                    20281    
+unix  3      [ ]         STREAM     CONNECTED     23999    
+unix  3      [ ]         STREAM     CONNECTED     23886    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22524    @/tmp/dbus-9kL6MDb1
+unix  3      [ ]         STREAM     CONNECTED     21810    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     46276    
+unix  3      [ ]         STREAM     CONNECTED     45826    
+unix  3      [ ]         STREAM     CONNECTED     41830    
+unix  3      [ ]         STREAM     CONNECTED     28038    
+unix  3      [ ]         STREAM     CONNECTED     28012    
+unix  3      [ ]         STREAM     CONNECTED     27620    @/dbus-vfs-daemon/socket-AL6xfRBk
+unix  3      [ ]         STREAM     CONNECTED     21689    
+unix  3      [ ]         DGRAM                    14778    
+unix  3      [ ]         STREAM     CONNECTED     21619    
+unix  3      [ ]         STREAM     CONNECTED     31788    
+unix  3      [ ]         STREAM     CONNECTED     23573    @/dbus-vfs-daemon/socket-ge6lf5HZ
+unix  3      [ ]         STREAM     CONNECTED     22573    
+unix  3      [ ]         STREAM     CONNECTED     21861    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     16699    
+unix  3      [ ]         STREAM     CONNECTED     21401    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     21299    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     17725    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21216    
+unix  3      [ ]         STREAM     CONNECTED     21107    
+unix  3      [ ]         STREAM     CONNECTED     28667    
+unix  3      [ ]         STREAM     CONNECTED     22211    
+unix  3      [ ]         STREAM     CONNECTED     21609    
+unix  3      [ ]         STREAM     CONNECTED     22328    
+unix  3      [ ]         STREAM     CONNECTED     22765    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     24589    
+unix  3      [ ]         STREAM     CONNECTED     21621    @/tmp/dbus-Li7mCKWUaP
+unix  2      [ ]         STREAM     CONNECTED     17325    
+unix  3      [ ]         STREAM     CONNECTED     28298    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22594    @/tmp/dbus-077VlGZZBx
+unix  3      [ ]         STREAM     CONNECTED     21300    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     23664    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22763    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22727    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    20857    
+unix  3      [ ]         SEQPACKET  CONNECTED     32650    
+unix  3      [ ]         STREAM     CONNECTED     22160    @/tmp/dbus-Li7mCKWUaP
+unix  2      [ ]         STREAM     CONNECTED     18423    /run/snapd.socket
+unix  3      [ ]         STREAM     CONNECTED     28666    
+unix  3      [ ]         STREAM     CONNECTED     27613    
+unix  3      [ ]         STREAM     CONNECTED     21021    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     20689    
+unix  3      [ ]         STREAM     CONNECTED     17739    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     17737    
+unix  3      [ ]         STREAM     CONNECTED     22285    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     22231    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     24286    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21340    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     20444    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     21374    
+unix  3      [ ]         STREAM     CONNECTED     21113    @/tmp/dbus-9kL6MDb1
+unix  3      [ ]         STREAM     CONNECTED     21017    
+unix  3      [ ]         STREAM     CONNECTED     24595    @/tmp/dbus-077VlGZZBx
+unix  3      [ ]         STREAM     CONNECTED     23748    
+unix  3      [ ]         STREAM     CONNECTED     28299    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     27619    
+unix  3      [ ]         STREAM     CONNECTED     20997    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     17966    
+unix  3      [ ]         STREAM     CONNECTED     46255    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21623    
+unix  3      [ ]         STREAM     CONNECTED     20443    
+unix  3      [ ]         STREAM     CONNECTED     28020    
+unix  3      [ ]         STREAM     CONNECTED     24590    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     21365    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     24288    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     23274    
+unix  3      [ ]         STREAM     CONNECTED     22725    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     20539    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    17315    
+unix  3      [ ]         STREAM     CONNECTED     22591    
+unix  3      [ ]         STREAM     CONNECTED     21302    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     21764    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21515    
+unix  3      [ ]         STREAM     CONNECTED     21218    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22749    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     45837    @nllab16-com.canonical.Unity.Master.Scope.files.T32824825665892
+unix  3      [ ]         STREAM     CONNECTED     45827    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     28296    
+unix  3      [ ]         STREAM     CONNECTED     28045    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     27610    
+unix  3      [ ]         STREAM     CONNECTED     21776    
+unix  3      [ ]         STREAM     CONNECTED     21205    
+unix  3      [ ]         STREAM     CONNECTED     21602    
+unix  3      [ ]         STREAM     CONNECTED     18961    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     14204    
+unix  3      [ ]         STREAM     CONNECTED     23961    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     21803    
+unix  3      [ ]         STREAM     CONNECTED     23723    
+unix  3      [ ]         STREAM     CONNECTED     22518    @/tmp/dbus-9kL6MDb1
+unix  3      [ ]         STREAM     CONNECTED     22199    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     21370    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21112    
+unix  3      [ ]         STREAM     CONNECTED     21551    
+unix  3      [ ]         STREAM     CONNECTED     24562    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20751    
+unix  3      [ ]         STREAM     CONNECTED     16359    
+unix  3      [ ]         STREAM     CONNECTED     32516    
+unix  3      [ ]         STREAM     CONNECTED     45846    
+unix  3      [ ]         STREAM     CONNECTED     28295    
+unix  3      [ ]         STREAM     CONNECTED     21294    
+unix  3      [ ]         STREAM     CONNECTED     20190    
+unix  3      [ ]         STREAM     CONNECTED     31752    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22082    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     21282    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21257    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     17331    
+unix  3      [ ]         STREAM     CONNECTED     16767    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     24924    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     23312    
+unix  3      [ ]         STREAM     CONNECTED     22822    
+unix  3      [ ]         STREAM     CONNECTED     22304    @/tmp/dbus-077VlGZZBx
+unix  3      [ ]         STREAM     CONNECTED     19937    
+unix  3      [ ]         STREAM     CONNECTED     23912    
+unix  3      [ ]         STREAM     CONNECTED     21784    @/tmp/dbus-Li7mCKWUaP
+unix  2      [ ]         DGRAM                    43149    
+unix  3      [ ]         STREAM     CONNECTED     28651    
+unix  3      [ ]         STREAM     CONNECTED     27451    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     23428    
+unix  3      [ ]         STREAM     CONNECTED     21702    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     21182    
+unix  3      [ ]         DGRAM                    14777    
+unix  3      [ ]         STREAM     CONNECTED     22769    
+unix  3      [ ]         STREAM     CONNECTED     22758    
+unix  3      [ ]         STREAM     CONNECTED     31783    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     22746    
+unix  3      [ ]         STREAM     CONNECTED     22612    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21877    
+unix  3      [ ]         STREAM     CONNECTED     21423    
+unix  3      [ ]         STREAM     CONNECTED     21109    
+unix  3      [ ]         STREAM     CONNECTED     21620    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     23568    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     22777    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21809    
+unix  3      [ ]         STREAM     CONNECTED     45861    
+unix  3      [ ]         STREAM     CONNECTED     28040    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     24139    
+unix  3      [ ]         STREAM     CONNECTED     21207    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     24287    
+unix  3      [ ]         STREAM     CONNECTED     22799    
+unix  3      [ ]         STREAM     CONNECTED     22297    
+unix  2      [ ]         DGRAM                    22246    
+unix  3      [ ]         STREAM     CONNECTED     17696    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22582    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     21348    
+unix  3      [ ]         STREAM     CONNECTED     21762    
+unix  3      [ ]         STREAM     CONNECTED     16766    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    16519    
+unix  3      [ ]         STREAM     CONNECTED     15360    
+unix  3      [ ]         STREAM     CONNECTED     45855    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     22796    
+unix  3      [ ]         STREAM     CONNECTED     45854    
+unix  3      [ ]         STREAM     CONNECTED     46245    
+unix  3      [ ]         STREAM     CONNECTED     24827    @/tmp/dbus-077VlGZZBx
+unix  3      [ ]         STREAM     CONNECTED     23431    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     21142    
+unix  3      [ ]         STREAM     CONNECTED     21068    @/tmp/dbus-Li7mCKWUaP
+unix  3      [ ]         STREAM     CONNECTED     18944    /run/acpid.socket
+unix  3      [ ]         STREAM     CONNECTED     45834    
+unix  3      [ ]         STREAM     CONNECTED     28044    
+unix  3      [ ]         STREAM     CONNECTED     24557    
+unix  3      [ ]         STREAM     CONNECTED     22318    
+unix  3      [ ]         STREAM     CONNECTED     17773    
+unix  3      [ ]         STREAM     CONNECTED     31771    
+unix  3      [ ]         STREAM     CONNECTED     21627    
+unix  3      [ ]         STREAM     CONNECTED     23285    @/tmp/dbus-077VlGZZBx
+unix  3      [ ]         STREAM     CONNECTED     22330    
+unix  3      [ ]         STREAM     CONNECTED     21390    
+unix  3      [ ]         STREAM     CONNECTED     20275    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21363    @/tmp/dbus-Li7mCKWUaP
+nllab16@nllab-16:~$ nmap google.com
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2019-12-19 09:09 IST
+Nmap scan report for google.com (216.58.199.174)
+Host is up (0.0046s latency).
+Other addresses for google.com (not scanned): 2404:6800:4009:80d::200e
+rDNS record for 216.58.199.174: bom05s08-in-f174.1e100.net
+Not shown: 997 filtered ports
+PORT    STATE SERVICE
+53/tcp  open  domain
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 8.50 seconds
+nllab16@nllab-16:~$ ^C
+nllab16@nllab-16:~$ route 
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         10.10.10.1      0.0.0.0         UG    100    0        0 enp2s0
+10.10.8.0       *               255.255.248.0   U     100    0        0 enp2s0
+link-local      *               255.255.0.0     U     1000   0        0 enp2s0
+nllab16@nllab-16:~$ route google.com
+Usage: route [-nNvee] [-FC] [<AF>]           List kernel routing tables
+       route [-v] [-FC] {add|del|flush} ...  Modify routing table for AF.
+
+       route {-h|--help} [<AF>]              Detailed usage syntax for specified AF.
+       route {-V|--version}                  Display version/author and exit.
+
+        -v, --verbose            be verbose
+        -n, --numeric            don't resolve names
+        -e, --extend             display other/more information
+        -F, --fib                display Forwarding Information Base (default)
+        -C, --cache              display routing cache instead of FIB
+
+  <AF>=Use '-A <af>' or '--<af>'; default: inet
+  List of possible address families (which support routing):
+    inet (DARPA Internet) inet6 (IPv6) ax25 (AMPR AX.25) 
+    netrom (AMPR NET/ROM) ipx (Novell IPX) ddp (Appletalk DDP) 
+    x25 (CCITT X.25) 
+
+
