@@ -1,0 +1,38 @@
+         --- System Configuration Dialog ---
+
+Continue with configuration dialog? [yes/no]: n
+
+
+Press RETURN to get started!
+
+
+
+Router>enable
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface Serial0/1/0
+Router(config-if)#exit
+Router(config)#hostname niranjan
+niranjan(config)#interface fa0/0
+niranjan(config-if)#ip address 10.0.0.2 255.0.0.0
+niranjan(config-if)#no shut
+
+niranjan(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+niranjan(config-if)#exit
+niranjan(config)#interface Serial0/1/0
+niranjan(config-if)#
+niranjan(config-if)#exit
+niranjan(config)#interface FastEthernet0/0
+niranjan(config-if)#
+niranjan(config-if)#exit
+niranjan(config)#interface FastEthernet0/0
+niranjan(config-if)#
+niranjan(config-if)#exit
+niranjan(config)#interface Serial0/1/0
+niranjan(config-if)#^Z
+niranjan#
+%SYS-5-CONFIG_I: Configured from console by console
+
+niranjan#^Z
